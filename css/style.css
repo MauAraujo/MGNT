@@ -55,3 +55,9 @@ p {
 footer.page-footer {
   margin: 0;
 }
+#descripcion {
+    font-size: 16px;
+}
+.parallax-container {
+    height: 655px;
+}
