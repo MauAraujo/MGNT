@@ -4787,14 +4787,18 @@ small {
 
 .card.small {
   height: 300px;
+  width: 300px;
 }
 
 .card.medium {
-  height: 400px;
+  height: autofill;
+  width: autofill;
+
 }
 
 .card.large {
   height: 500px;
+  width: autofill;
 }
 
 .card.horizontal {
