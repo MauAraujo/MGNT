@@ -13,13 +13,14 @@ app.use("/static", express.static("public"));
 
 function inicio(request, response){
 
-	response.sendFile(__dirname + "/index.html");
+	response.sendFile(__dirname + "/public/index.html");
 
 }
 
 function nosotros(request, response){
-	response.sendFile(__dirname + "/nosotros.html");
+	response.sendFile(__dirname + "/public/views/nosotros.html");
 }
 
-app.listen(8080);
+
+app.listen(3000);
 console.log("running server")
