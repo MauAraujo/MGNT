@@ -22,6 +22,8 @@ app.use('/articulos', articleRouter);
 //URL
 app.get("/", inicio);
 app.get("/nosotros", nosotros)
+app.get("/contacto", contacto)
+app.get("/dashboard", dashboard)
 
 
 //Acceso a html
@@ -37,6 +39,12 @@ function inicio(request, response){
 
 function nosotros(request, response){
 	response.sendFile(__dirname + "/public/views/nosotros.html");
+}
+function contacto(request, response){
+	response.sendFile(__dirname + "/public/views/contacto.html");
+}
+function dashboard(request, response){
+	response.sendFile(__dirname + "/public/views/dashboard.html");
 }
 
 app.listen(3000);
