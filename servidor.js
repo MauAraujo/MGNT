@@ -4,6 +4,7 @@ var  mongoose = require('mongoose');
 var db = mongoose.connection;
 var bodyParser = require('body-parser');
 var articleRouter = require('./routes/articleRouter');
+var escribirRouter = require('./routes/escribirRouter');
 
 //Body parser
 app.use(bodyParser.json());
@@ -18,12 +19,13 @@ db.once('open', function(){
 
 //Config article router
 app.use('/articulos', articleRouter);
+app.use('/escribir', escribirRouter);
 
 //URL
 app.get("/", inicio);
-app.get("/nosotros", nosotros)
-app.get("/contacto", contacto)
-app.get("/dashboard", dashboard)
+app.get("/nosotros", nosotros);
+app.get("/contacto", contacto);
+app.get("/dashboard", dashboard);
 
 
 //Acceso a html
@@ -48,4 +50,4 @@ function dashboard(request, response){
 }
 
 app.listen(3000);
-console.log("running server")
+console.log("running server");
